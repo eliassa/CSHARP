@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegates.cs" />
     <Compile Include="Threads.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
