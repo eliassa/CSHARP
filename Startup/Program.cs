@@ -14,9 +14,26 @@ namespace Startup
             Console.WriteLine("Starting...");
             Console.WriteLine(" ");
 
-            Delegates.PerformClaculation(3, 5, "add");
-            Delegates.PerformClaculation(3, 5, "multiply");
-            Delegates.PerformClaculation(3, 5);
+            Console.WriteLine("Threads & Delegates");
+            Tasks.RunTasks(new Action[]{
+                new Action(() => Delegates.PerformClaculation(3, 5, "add")),
+                new Action(() => Delegates.PerformClaculation(3, 5, "multiply")),
+                new Action(() => Delegates.PerformClaculation(3, 5))
+            });
+            Tasks.TaskCancelation();
+            Console.WriteLine(" ");
+
+            Console.WriteLine("PLINQ");
+            Plinq.FireUpSomePlinqStuff();
+            Console.WriteLine(" ");
+
+            Console.WriteLine("Lock");
+            Locks.InterLocking();
+            Console.WriteLine(" ");
+
+            Console.WriteLine("Concurrent collections");
+            ConcurrentCollections.BlockingCollection();
+            Console.WriteLine(" ");
 
             //Threads.RunThreads(4);
 

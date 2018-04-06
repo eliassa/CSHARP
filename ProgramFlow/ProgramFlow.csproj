@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConcurrentCollections.cs" />
     <Compile Include="Delegates.cs" />
+    <Compile Include="Locks.cs" />
+    <Compile Include="Plinq.cs" />
+    <Compile Include="Tasks.cs" />
     <Compile Include="Threads.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,27 +10,25 @@ namespace ProgramFlow
     {
         public delegate void Calculate(int x, int y);
 
-        public static void Add(int a, int b) {  Console.WriteLine("add: " + (a+b)); }
-
-        public static void Multiply(int a, int b) { Console.WriteLine("multiply: " + (a*b)); }
-
         public static void PerformClaculation(int x, int y, string op = null)
         {
             Calculate cal;
             switch(op) {
                 case "add":
-                    cal = Add;
-                    break;
+                    cal = (a, b) => Console.WriteLine("add: " + (a + b));
+                    goto Exec;
                 case "multiply":
-                    cal = Multiply;
-                    break;
+                    cal = (a, b) => Console.WriteLine("multiply: " + (a * b));
+                    goto Exec;
                 case null:
-                    cal = Add;
-                    cal += Multiply;
-                    break;
+                    cal = (a, b) => Console.WriteLine("add: " + (a + b));
+                    cal += (a, b) => Console.WriteLine("multiply: " + (a * b));
+                    goto Exec;
                 default: throw new Exception(op + " is not a valid operator");
             }
-            cal(x, y);
+            
+            Exec:
+            cal?.Invoke(x, y);
         }
     }
 }
