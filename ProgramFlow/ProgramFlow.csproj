@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ConcurrentCollections.cs" />
     <Compile Include="Delegates.cs" />
+    <Compile Include="Events.cs" />
     <Compile Include="Locks.cs" />
     <Compile Include="Plinq.cs" />
     <Compile Include="Tasks.cs" />

@@ -8,11 +8,13 @@ namespace ProgramFlow
 {
     public static class Delegates
     {
-        public delegate void Calculate(int x, int y);
+        public delegate void Claculate(int x, int y);
+        public delegate int Calculate(IEnumerable<int> ListOfIntegers);
 
         public static void PerformClaculation(int x, int y, string op = null)
         {
-            Calculate cal;
+            Claculate cal;
+            Console.WriteLine("Claculation in process...");
             switch(op) {
                 case "add":
                     cal = (a, b) => Console.WriteLine("add: " + (a + b));
@@ -29,6 +31,32 @@ namespace ProgramFlow
             
             Exec:
             cal?.Invoke(x, y);
+        }
+
+        public static int DelegateMulticasting(int x, int y)
+        {
+            Calculate cal;
+            List<int> ints = new List<int>() { 12, 16, 200, 73 };
+
+            cal = (IEnumerable<int> a) =>
+            {
+                Console.WriteLine("1st");
+                return a.Sum();
+            };
+
+            cal += (IEnumerable<int> a) =>
+            {
+                Console.WriteLine("2nd");
+                return a.Max();
+            };
+
+            cal += (IEnumerable<int> a) =>
+            {
+                Console.WriteLine("3rd");
+                return a.Last();
+            };
+
+            return cal(ints);
         }
     }
 }

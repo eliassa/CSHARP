@@ -21,6 +21,7 @@ namespace Startup
                 new Action(() => Delegates.PerformClaculation(3, 5))
             });
             Tasks.TaskCancelation();
+            Console.WriteLine("Delegate Multicasting: " + Delegates.DelegateMulticasting(200, 50));
             Console.WriteLine(" ");
 
             Console.WriteLine("PLINQ");
