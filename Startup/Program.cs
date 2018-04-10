@@ -36,6 +36,11 @@ namespace Startup
             ConcurrentCollections.BlockingCollection();
             Console.WriteLine(" ");
 
+
+            Console.WriteLine("Events");
+            Events.RunWorker();
+            Console.WriteLine(" ");
+
             //Threads.RunThreads(4);
 
             Console.WriteLine(" ");
