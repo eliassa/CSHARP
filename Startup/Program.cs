@@ -1,6 +1,7 @@
-﻿using CreateAndUseTypes;
+﻿using Types;
 using ProgramFlow;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,7 +47,17 @@ namespace Startup
             //GenericClass<List<int>> gc = new GenericClass<List<int>>(new List<int>());
             //Console.WriteLine(gc.ToString());
 
-            Conversion.DoSomeConversion();
+            //Conversion.DoSomeConversion();
+
+            //DynamicTypes.DoSomeDynamicCoding();
+            //DynamicTypes.HavingFunWithExpandoObject();
+
+            //Attributes.DoSomeAtributeStuff();
+            //Reflection.DoSomeReflectionStuff();
+
+            //CodeCompileUnit compileUnit = new CodeCompileUnit();
+
+            CodeDOMstuff.DoSomeCodeDOMStuff();
 
             Console.WriteLine(" ");
             Console.WriteLine("Done!");

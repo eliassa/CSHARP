@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A8CB842-A7DB-4F5C-B682-F3D95CD97DE8}</ProjectGuid>
+    <ProjectGuid>{F3740395-DCC7-460A-826C-D718F88845C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProgramFlow</RootNamespace>
-    <AssemblyName>ProgramFlow</AssemblyName>
+    <RootNamespace>Types</RootNamespace>
+    <AssemblyName>Types</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,16 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConcurrentCollections.cs" />
-    <Compile Include="Delegates.cs" />
-    <Compile Include="Events.cs" />
-    <Compile Include="IRandom.cs" />
-    <Compile Include="Locks.cs" />
-    <Compile Include="Plinq.cs" />
-    <Compile Include="StaticSingelton.cs" />
-    <Compile Include="Tasks.cs" />
-    <Compile Include="Threads.cs" />
+    <Compile Include="Attributes.cs" />
+    <Compile Include="CodeDOMstuff.cs" />
+    <Compile Include="Conversion.cs" />
+    <Compile Include="DynamicTypes.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="GenericClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProgramFlow\ProgramFlow.csproj">
+      <Project>{7a8cb842-a7db-4f5c-b682-f3d95cd97de8}</Project>
+      <Name>ProgramFlow</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

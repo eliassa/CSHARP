@@ -49,13 +49,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CreateAndUseTypes\CreateAndUseTypes.csproj">
-      <Project>{168BB95A-820D-4424-AC5F-9BFB013CFD40}</Project>
-      <Name>CreateAndUseTypes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ProgramFlow\ProgramFlow.csproj">
       <Project>{7A8CB842-A7DB-4F5C-B682-F3D95CD97DE8}</Project>
       <Name>ProgramFlow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Types\Types.csproj">
+      <Project>{f3740395-dcc7-460a-826c-d718f88845c6}</Project>
+      <Name>Types</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
